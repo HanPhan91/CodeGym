@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo form đơn giản</title>
+</head>
+
+<body>
+    <dir style="background-color: rgb(119, 245, 245);width: 505px;padding-left: 5px;">
+        <form action="basicform.html" method="get"></form>
+        <table>
+            <thead>
+                <caption class="cap1">SỞ THÍCH CỦA BẠN</caption>
+            </thead>
+            <TBody>
+                <tr>
+                    <td id="info">Họ và tên</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td id="info">Email</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td id="info">Sở thích</td>
+                    <td>
+                        <div id="khung"><input type="checkbox"><span id="hobbit">Thể thao</span></div>
+                        <div id="khung"><input type="checkbox"><span id="hobbit">Âm nhạc</span></div>
+                        <div id="khung"><input type="checkbox"><span id="hobbit">Đọc sách</span></div> <br>
+                        <div id="khung"><input type="checkbox"><span id="hobbit">Lướt web</span></div>
+                        <div id="khung"><input type="checkbox"><span id="hobbit">Chơi game</span></div>
+                        <div id="khung"><input type="checkbox"><span id="hobbit">Điện ảnh</span></div> <br>
+                        <div id="khung"><input type="checkbox"><span id="hobbit">Du lịch</span></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" class="btn" value="Gửi thông tin">
+                        <input type="submit" class="btn" value="Nhập lại">
+                    </td>
+                </tr>
+            </TBody>
+        </table>
+        </form>
+    </dir>
+    <br><br>
+    <dir style="background-color: rgb(245, 209, 117);width: 505px;padding-left: 5px;">
+        <form action="basicform.html" method="get">
+            <table>
+                <thead>
+                    <caption class="cap2">STUDENT REGISTER</caption>
+                </thead>
+                <tbody>
+                    <tr class="info">
+                        <td class="tab2">Name</td>
+                        <td><input type="text" size="30"></td>
+                    </tr>
+                    <tr class="info">
+                        <td>Birth day</td>
+                        <td><input type="text" size="20"></td>
+                    </tr>
+                    <tr class="info">
+                        <td>Sex</td>
+                        <td><input type="radio">Male
+                            <input type="radio">Female</td>
+                    </tr>
+                    <tr class="info">
+                        <td>Address</td>
+                        <td><textarea name="" id="" cols="30" rows="3"></textarea></td>
+                    </tr>
+                    <tr class="info">
+                        <td>Class</td>
+                        <td>
+                            <select name="class" id="">
+                                <option value="">Choose class</option>
+                                <option value="">Class A</option>
+                                <option value="">Class B</option>
+                                <option value="">Class C</option>
+                                <option value="">Class D</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr class="info">
+                        <td>Email</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr class="info">
+                        <td>Phone number</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr class="info">
+                        <td></td>
+                        <td><input type="submit" value="Đăng ký" class="btn"><input type="submit" value="Nhập lại"
+                                class="btn"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </dir>
+
+</body>
+<style>
+    table {
+        width: 500px;
+    }
+
+    table caption {
+
+        font-weight: 700;
+        padding: 5px;
+    }
+
+    .cap1 {
+        color: white;
+        background-color: tomato;
+    }
+
+    #info {
+        text-align: right;
+        color: blue;
+        vertical-align: top;
+    }
+
+    #hobbit {
+        color: red;
+    }
+
+    #khung {
+        display: inline-block;
+        width: 30%;
+    }
+
+    .cap2 {
+        text-align: left;
+        background-color: rgb(192, 250, 252);
+        color: blue;
+    }
+
+    .info {
+        color: darkblue;
+
+    }
+
+    .tab2 {
+        width: 100px;
+    }
+
+    .btn {
+        margin-right: 5px;
+    }
+</style>
+
+</html>
