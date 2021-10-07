@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Cơ bản</title>
+    <style>
+        body {
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+            src: url(font/LucidaGrande.ttf),
+                url(font/LucidaSansUnicode.ttf);
+        }
+    </style>
+
+</head>
+<body>
+    <form action="simpleform.html" method="GET">
+        <h1>Order Form</h1>
+        <p>What would you like to buy?</p>
+        <select name="Menu" id="menu" style="width: 100px;">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+        </select>
+        <p>How many would you like to order?</p>
+        <input type="radio" name="quality_order" id="">1 - $10 <br>
+        <input type="radio" name="quality_order" id="">2 - $20 <br>
+        <input type="radio" name="quality_order" id="">3 - $30 <br>
+        <p>Name <span style="color: red;">*</span></p>
+        <input type="text" name="FirstName" placeholder="FirstName" style="margin-right: 10px;"><input type="text" name="LastName" placeholder="LastName">
+        <p>Email</p>
+        <input type="text" name="email" size="50">
+        <p>Phone Number</p>
+        <input type="text" size="5"><span>-</span><input type="text" size="5"><span>-</span><input type="text" size="5"><br>
+        <input type="submit" name="btn_submit" value="submit">
+    </form>
+</body>
+
+</html>
