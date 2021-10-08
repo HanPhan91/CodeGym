@@ -10,7 +10,7 @@
 
 <body>
     <dir style="background-color: rgb(119, 245, 245);width: 505px;padding-left: 5px;">
-        <form action="basicform.html" method="get"></form>
+        <form action="basicform.html" method="get">
         <table>
             <thead>
                 <caption class="cap1">SỞ THÍCH CỦA BẠN</caption>
@@ -22,7 +22,7 @@
                 </tr>
                 <tr>
                     <td id="info">Email</td>
-                    <td><input type="text"></td>
+                    <td><input type="email" required></td>
                 </tr>
                 <tr>
                     <td id="info">Sở thích</td>
@@ -40,7 +40,7 @@
                     <td></td>
                     <td>
                         <input type="submit" class="btn" value="Gửi thông tin">
-                        <input type="submit" class="btn" value="Nhập lại">
+                        <input type="reset" class="btn" value="Nhập lại">
                     </td>
                 </tr>
             </TBody>
@@ -61,12 +61,12 @@
                     </tr>
                     <tr class="info">
                         <td>Birth day</td>
-                        <td><input type="text" size="20"></td>
+                        <td><input type="date" size="20"></td>
                     </tr>
                     <tr class="info">
                         <td>Sex</td>
-                        <td><input type="radio">Male
-                            <input type="radio">Female</td>
+                        <td><input type="radio" name="sex">Male
+                            <input type="radio" name="sex">Female</td>
                     </tr>
                     <tr class="info">
                         <td>Address</td>
@@ -76,25 +76,25 @@
                         <td>Class</td>
                         <td>
                             <select name="class" id="">
-                                <option value="">Choose class</option>
-                                <option value="">Class A</option>
-                                <option value="">Class B</option>
-                                <option value="">Class C</option>
-                                <option value="">Class D</option>
+                                <option value="" selected>Choose class</option>
+                                <option value="1">Class A</option>
+                                <option value="2">Class B</option>
+                                <option value="3">Class C</option>
+                                <option value="4">Class D</option>
                             </select>
                         </td>
                     </tr>
                     <tr class="info">
                         <td>Email</td>
-                        <td><input type="text"></td>
+                        <td><input type="email" required></td>
                     </tr>
                     <tr class="info">
                         <td>Phone number</td>
-                        <td><input type="text"></td>
+                        <td><input type="tel"></td>
                     </tr>
                     <tr class="info">
                         <td></td>
-                        <td><input type="submit" value="Đăng ký" class="btn"><input type="submit" value="Nhập lại"
+                        <td><input type="submit" value="Đăng ký" class="btn"><input type="reset" value="Nhập lại"
                                 class="btn"></td>
                     </tr>
                 </tbody>
