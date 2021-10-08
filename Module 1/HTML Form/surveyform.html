@@ -48,7 +48,7 @@
             <p class="title">What features would you like to see in the new product.</p>
             <textarea name="" id="" cols="100" rows="10"></textarea>
             <p class="title">Please rate your level of agreement with the following statements.</p>
-            <table style="border: 1px black solid;">
+            <table cellspacing="0">
                 <tr>
                     <td></td>
                     <td>Strongly Disagree</td>
@@ -93,8 +93,12 @@
     select{
         width: 500px;
     }
+    table{
+        border: 1px black solid;
+    }
     table tr td{
         border: 1px black solid;
+        padding: 0px;
         text-align: center;
         width: 150px;
     }
