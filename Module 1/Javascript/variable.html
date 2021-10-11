@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable JS</title>
+</head>
+
+<body>
+    <p style="font-weight: 700;">Bài 1: Sử dụng hàm document.write() để viết kết quả ra màn hình.</p>
+    <script>
+        let i = 10;
+        let f = 20.5;
+        let b = true;
+        let s = 'Hà Nội';
+        document.write('i = ' + i);
+        document.write('<br/>');
+        document.write('f = ' + f);
+        document.write('<br/>');
+        document.write('b = ' + b);
+        document.write('<br/>');
+        document.write('s = ' + s);
+    </script>
+    <p style="font-weight: 700;">Bài 2:Viết một đoạn mã Javascript, khai báo biến width chứa giá trị độ rộng của hình chữ nhật, biến height chứa giá trị chiều cao của hình chữ nhật. In ra màn hình diện tích của hình chữ nhật đó.</p>
+    <p> Width= 40</p>
+    <p>Height=20</p>
+    <script>
+        let width = 40
+        let height = 20
+        let area = width * height
+        document.write('Area = ' + area)
+    </script>
+    <p style="font-weight: 700;">Bài 3: Dùng hàm prompt() để nhập 2 số từ bàn phím, lưu vào 2 biến là a và b. Kiểm tra xem a có phải là bội số của b hay không (tức là a có chia hết cho b hay không). Hiển thị kết quả ra màn hình bằng cách sử dụng hàm alert().</p>
+    <button onclick="task3()">Click để làm bài 3</button>
+    <script>
+        function task3() {
+            var a= window.prompt('Nhập vào số a: ');
+            var b= window.prompt('Nhập vào số b: '); 
+            if (a%b==0)
+                console.log('a là bội số của b');
+            else
+                console.log('a ko phải là bội số của b');
+        }
+        
+    </script>
+</body>
+
+</html>
