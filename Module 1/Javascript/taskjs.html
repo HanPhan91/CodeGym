@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable, Datatype, Operator JS</title>
+    <style>
+        #ketqua_diem {
+            display: none;
+        }
+        #ketqua_do{
+            display: none;
+        }
+        .title{
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="title">Bài 1: Viết chương trình nhập điểm của một sinh viên cho các môn: Vật lý, Hóa học, và Sinh học. Sau đó hiển thị
+        điểm trung bình và tổng của những điểm này.</p>
+    <table>
+        <tr>
+            <td>
+                <span>Nhập điểm Vật Lý: </span>
+            </td>
+            <td>
+                <input type="text" name="" id="diemvl" placeholder="Điểm Vật Lý">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>Nhập điểm Hóa: </span>
+            </td>
+            <td>
+                <input type="text" name="" id="diemhoa" placeholder="Điểm Hóa">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>Nhập điểm Sinh học: </span>
+            </td>
+            <td>
+                <input type="text" name="" id="diemsinh" placeholder="Điểm Sinh học">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <input type="submit" value="Tính điểm" onclick="tinhdiem()">
+            </td>
+        </tr>
+    </table>
+    <table id="ketqua_diem">
+        <tr>
+            <td>
+                Điểm trung bình:
+            </td>
+            <td>
+                <p id="diemtb"></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Tổng điểm:</td>
+            <td>
+                <p id="tongdiem"></p>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function tinhdiem() {
+            var diem_vl = parseInt(document.getElementById('diemvl').value);
+            var diemhoa = parseInt(document.getElementById('diemhoa').value);
+            var diemsinh = parseInt(document.getElementById('diemsinh').value);
+            var diemtb = (diem_vl + diemhoa + diemsinh) / 3;
+            document.getElementById('diemtb').innerText = diemtb;
+            var tongdiem = diem_vl + diemhoa + diemsinh;
+            document.getElementById('tongdiem').innerText = tongdiem;
+            document.getElementById('ketqua_diem').style.display = 'block';
+        }
+    </script>
+    <p class="title">Bài 2:  Viết chương trình nhập một giá trị là độ 0C (Celsius) và chuyển nó sang độ 0F (Fahrenheit)</p>
+    <table>
+        <tr>
+            <td>Nhập độ C: </td>
+            <td><input type="text" name="" id="do_c" placeholder="Độ C"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <input type="submit" value="Chuyển sang độ F" onclick="chuyendoi()">
+            </td>
+        </tr>
+        <tr id="ketqua_do">
+            <td>Độ F là:</td>
+            <td><p id='do_f'></p></td>
+        </tr>
+    </table>
+    <script>
+        function chuyendoi() {
+            var do_c=document.getElementById('do_c').value;
+            var do_f= (do_c * 9 / 5)+32;
+            document.getElementById('do_f').innerText= do_f;
+            document.getElementById('ketqua_do').style.display='block';
+        }
+    </script>
+    <p class="title">Bài 3: Viết chương trình tính diện tích hình tròn</p>
+    <table>
+        <tr>
+            <td>Nhập bán kính hình tròn </td>
+            <td><input type="text" name="" id="r1"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;"><input type="submit" value="Tính diện tích" onclick="tinhdientich()"></td>
+        </tr>
+        <tr id="ketqua_dientich" style="display: none;">
+            <td>Diện tích hình tròn: </td>
+            <td><p id="dientich"></p></td>
+        </tr>
+    </table>
+    <script>
+        function tinhdientich() {
+            var bankinh=document.getElementById('r1').value;
+            var dientich= bankinh*bankinh*Math.PI;
+            document.getElementById('dientich').innerText= dientich;
+            document.getElementById('ketqua_dientich').style.display= 'block';
+        }
+    </script>
+    <p class="title">Bài 4: Viết chương trình chu vi hình tròn</p>
+    <table>
+        <tr>
+            <td>Nhập bán kính hình tròn </td>
+            <td><input type="text" name="" id="r2"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;"><input type="submit" value="Tính chu vi" onclick="tinhchuvi()"></td>
+        </tr>
+        <tr id="ketqua_chuvi" style="display: none;">
+            <td>Diện tích hình tròn: </td>
+            <td><p id="chuvi"></p></td>
+        </tr>
+    </table>
+    <script>
+        function tinhchuvi() {
+            var bankinh=document.getElementById('r2').value;
+            var chuvi= 2*bankinh*Math.PI;
+            document.getElementById('chuvi').innerText= chuvi;
+            document.getElementById('ketqua_chuvi').style.display= 'block';
+        }
+    </script>
+</body>
+
+</html>
