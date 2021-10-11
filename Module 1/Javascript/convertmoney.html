@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Money</title>
+</head>
+<body>
+    <p style="font-weight: 700;font-size: 18px;">Convert Money</p>
+    <table style="width: 500px;">
+        <tr>
+            <td>Amount</td>
+            <td>From Currency</td>
+            <td>To Currency</td>
+        </tr>
+        <tr>
+            <td><input type="text" name="" id="number"></td>
+            <td><select name="from" id="from_money">
+                <option value="vn">Viet Nam</option>
+                <option value="usd">USD</option>
+                <option value="pound">Pound</option>
+            </select>
+        </td>
+            <td><select name="to" id="to_money">
+                <option value="vn">Viet Nam</option>
+                <option value="usd">USD</option>
+                <option value="pound">Pound</option>
+            </select></td>
+        </tr>
+        <tr style="text-align: center;">
+            <td colspan="3"><input type="submit" value="Convert" onclick="convert()"></td>
+        </tr>
+        <tr>
+            <td>
+                Result: 
+            </td>
+            <td colspan="2"><p id='result'></p></td>
+        </tr>
+    </table>
+    <script>
+        function convert(params) {
+            var from_m=document.getElementById('from_money').value;
+            var to_m=document.getElementById('to_money').value;
+            var money=document.getElementById('number').value;
+            var conv;
+            if ((from_m==='vn') && (to_m==='vn'))
+            {
+                conv=money;
+                document.getElementById('result').innerText=conv;
+            }
+            if ((from_m==='vn')&& (to_m==='usd'))
+            {
+                conv=money/23000;
+                document.getElementById('result').innerText=conv;
+            }
+            if ((from_m==='vn')&& (to_m==='pound'))
+            {
+                conv=money/31000;
+                document.getElementById('result').innerText=conv;
+            }
+
+            if ((from_m==='usd')&& (to_m==='vn'))
+            {
+                conv=money*23000;
+                document.getElementById('result').innerText=conv;
+            }
+            if ((from_m==='usd')&& (to_m==='usd'))
+            {
+                conv=money;
+                document.getElementById('result').innerText=conv;
+            }
+            if ((from_m==='usd')&& (to_m==='pound'))
+            {
+                conv=money*0.73;
+                document.getElementById('result').innerText=conv;
+            }
+
+            if ((from_m==='pound')&& (to_m==='vn'))
+            {
+                conv=money*31000;
+                document.getElementById('result').innerText=conv;
+            }
+            if ((from_m==='pound')&& (to_m==='usd'))
+            {
+                conv=money/0.73;
+                document.getElementById('result').innerText=conv;
+            }
+            if ((from_m==='pound')&& (to_m==='pound'))
+            {
+                conv=money;
+                document.getElementById('result').innerText=conv;
+            }
+            
+
+        }
+        
+
+    </script>
+</body>
+</html>
