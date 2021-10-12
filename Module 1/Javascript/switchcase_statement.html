@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case Statement</title>
+</head>
+
+<body>
+    <script>
+        let browser = prompt("Bài 1: ", "");
+        switch (browser) {
+            case 'Edge':
+                alert("You've got the Edge!");
+                break;
+            case 'Chrome':
+            case 'Firefox':
+            case 'Safari':
+            case 'Opera':
+                alert('Okay we support these browsers too');
+                break;
+            default:
+                alert('We hope that this page looks ok!');
+        }
+
+        let a = parseInt(prompt('Bài 2: Nhập a:', ''));
+        switch (a) {
+            case 0: {
+                alert("0");
+                break;
+            }
+            case 1: {
+                alert("1");
+                break;
+            }
+            case 2:
+            case 3: {
+                alert("2,3");
+                break;
+            }
+            default:
+                alert('Nhập sai')
+        }
+
+        let value = prompt('Type a number', 0);
+        switch (value) {
+            case "5":
+                alert(1);
+                break;
+            case "0":
+                alert(0);
+                break;
+            case "-5":
+                alert(-5);
+                break;
+            default:
+                alert('Wrong');
+                break;
+        }
+    </script>
+
+</body>
+
+</html>
