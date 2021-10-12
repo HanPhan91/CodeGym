@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors by JS</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td colspan="4">
+                <div id="color" style="height: 100px;position: relative;">
+                <p id="code_color" style="margin: 0;top: 50%;left: 50%; transform: translate(-50%, -50%);position: absolute;font-weight: 700;font-size: 18px;">fawf</p>
+                </div>
+            </td>
+        </tr>
+        <tr style="text-align: center;">
+            <td>Red</td>
+            <td>Green</td>
+            <td>Blue</td>
+            <td>Alpha</td>
+        </tr>
+        <tr>
+            <td><input style="background:red;" type="range" name="" id="red" min="0" max="255" value="50" oninput="red_color()"></td>
+            <td><input type="range" name="" id="green" min="0" max="255" value="50" oninput="green_color()"></td>
+            <td><input type="range" name="" id="blue" min="0" max="255" value="50" oninput="blue_color()"></td>
+            <td><input type="range" name="" id="alpha" min="0" max="10" value="5" oninput="alpha_color()"></td>
+        </tr>
+    </table>
+    
+    <script>
+            
+            var num_red, num_blue, num_green, num_alpha, num_color;
+            window.onload= function on_load() {
+                red_color();
+                green_color();
+                blue_color();
+                alpha_color();
+                num_color = "rgba"+ "("+ num_red + "," + num_green + "," + num_blue + "," + num_alpha + ")";
+                document.getElementById('color').style.backgroundColor= num_color;
+            }
+           function red_color() {
+                num_red= document.getElementById('red').value;
+                on_change();
+            }
+            function green_color() {
+                num_green= document.getElementById('green').value;
+                on_change();
+            }
+            function blue_color() {
+                num_blue= document.getElementById('blue').value;
+                on_change();
+            }
+            function alpha_color() {
+                num_alpha= document.getElementById('alpha').value;
+                num_alpha= num_alpha/10;
+                on_change();
+            }
+            function on_change() {
+                num_color=`rgba(${num_red},${num_green},${num_blue},${num_alpha})`
+                // num_color = "rgba"+ "("+ num_red + "," + num_green + "," + num_blue + "," + num_alpha + ")";
+                document.getElementById('color').style.backgroundColor= num_color;
+                document.getElementById('code_color').innerText= num_color;
+            }
+    </script>
+</body>
+
+</html>
