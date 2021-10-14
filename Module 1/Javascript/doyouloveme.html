@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoYouLoveMe Game</title>
+    <style>
+        #header{
+            height: 50px;
+            width: 200px;
+            margin: 0 auto;
+        }
+        #header p{
+            text-align: center;
+            font-size: 25px;
+            font-weight: bolder;
+        }
+        #game{
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <p>Do you love me ?</p>
+    </div>
+    <div id="game">
+        <button id="yes" onclick="sayyes()">YES</button>
+        <button id="no" onmouseover="sayno()" style="position: relative;">NO</button>
+    </div>
+    <script>
+        var xPosition= document.getElementById('no').offsetLeft;
+        var yPosition= document.getElementById('no').offsetTop;
+        function sayyes() {
+            alert("I Love You Too ^^");
+        }
+        function sayno() {
+            let screen_height= Number(window.innerHeight);
+            let screen_width=Number(window.innerWidth);
+            let random_left= (Math.random()* 200);
+            let random_top= (Math.random()* 200);
+            document.getElementById('no').style.left= `${random_left}px`;
+            document.getElementById('no').style.top= `${random_top}px`;
+        }
+        
+    </script>
+</body>
+</html>
