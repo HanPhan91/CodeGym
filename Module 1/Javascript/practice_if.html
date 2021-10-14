@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratice If Condition</title>
+    <style>
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p class="title">Bài 1: Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không</p>
+        <input type="text" placeholder="Nhập số a" id="bt1_a"><br>
+        <input type="text" placeholder="Nhập số b" id="bt1_b">
+        <button onclick="bt1()">Kiểm tra</button>
+        <p id="result_bt1"></p>
+        <script>
+            function bt1() {
+                let bt1_aNum = Number(document.getElementById('bt1_a').value);
+                let bt1_bNum = Number(document.getElementById('bt1_b').value);
+                if (bt1_aNum % bt1_bNum == 0) {
+                    document.getElementById('result_bt1').innerText = "a chia hết cho b";
+                } else
+                    document.getElementById('result_bt1').innerText = "a không chia hết cho b";
+            }
+        </script>
+    </div>
+    <div>
+        <p class="title">Bài 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.</p>
+        <input type="text" placeholder="Nhập tuổi" id="bt2_tuoi">
+        <button onclick="bt2()">Kiểm tra</button>
+        <p id="result_bt2"></p>
+        <script>
+            function bt2() {
+                let bt2_num = Number(document.getElementById('bt2_tuoi').value);
+                if (bt2_num >= 16) {
+                    document.getElementById('result_bt2').innerText = "Đủ điều kiện nhập học";
+                } else
+                    document.getElementById('result_bt2').innerText = "Không đủ điều kiện nhập học";
+            }
+        </script>
+    </div>
+    <div>
+        <p class="title">Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn
+            hay nhỏ hơn 0</p>
+        <input type="text" placeholder="Nhập vào một số" id="bt3_num">
+        <button onclick="bt3()">Kiểm tra</button>
+        <p id="result_bt3"></p>
+        <script>
+            function bt3() {
+                let bt3_num = Number(document.getElementById('bt3_num').value);
+                if (bt3_num > 0) {
+                    document.getElementById('result_bt3').innerText = `${bt3_num} là số lớn hơn 0`;
+                } else if (bt3_num == 0) {
+                    document.getElementById('result_bt3').innerText = `${bt3_num} bằng 0`;
+                } else
+                    document.getElementById('result_bt3').innerText = `${bt3_num} là số bé hơn 0`;
+            }
+        </script>
+    </div>
+    <div>
+        <p class="title">Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó</p>
+        <input type="text" placeholder="Nhập số a" id="bt4_a"><br>
+        <input type="text" placeholder="Nhập số b" id="bt4_b"><br>
+        <input type="text" placeholder="Nhập số c" id="bt4_c">
+        <button onclick="bt4()">Tìm số lớn nhất</button>
+        <p id="result_bt4"></p>
+        <script>
+            function bt4() {
+                let bt4_aNUm = Number(document.getElementById('bt4_a').value);
+                let bt4_bNUm = Number(document.getElementById('bt4_b').value);
+                let bt4_cNUm = Number(document.getElementById('bt4_c').value);
+                let bt4_max;
+                if (bt4_aNUm > bt4_bNUm) {
+                    bt4_max = bt4_aNUm;
+                    if (bt4_max > bt4_cNUm) {
+                        document.getElementById('result_bt4').innerText = ` Số lớn nhất là ${bt4_max}`;
+                    } else
+                        document.getElementById('result_bt4').innerText = ` Số lớn nhất là ${bt4_cNUm}`;
+                }
+                if (bt4_aNUm < bt4_bNUm) {
+                    bt4_max = bt4_bNUm;
+                    if (bt4_max > bt4_cNUm) {
+                        document.getElementById('result_bt4').innerText = ` Số lớn nhất là ${bt4_max}`;
+                    } else
+                        document.getElementById('result_bt4').innerText = ` Số lớn nhất là ${bt4_cNUm}`;
+                }
+            }
+        </script>
+    </div>
+    <div>
+        <p class="title">Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi
+            cuối kỳ</p>
+        <input type="text" placeholder="Nhập điểm kiểm tra" id="bt5_dkt"><br>
+        <input type="text" placeholder="Nhập điểm thi giữa kỳ" id="bt5_dgk"><br>
+        <input type="text" placeholder="Nhập điểm thi cuối kỳ" id="bt5_dck">
+        <button onclick="bt5()">Xếp hạng</button>
+        <p id="result_bt5"></p>
+        <script>
+            function bt5() {
+                let bt5_Diemkt = Number(document.getElementById('bt5_dkt').value);
+                let bt5_Diemgk = Number(document.getElementById('bt5_dgk').value);
+                let bt5_Diemck = Number(document.getElementById('bt5_dck').value);
+                let bt5_Diemtb = (bt5_Diemck + bt5_Diemgk + bt5_Diemkt) / 3;
+                let b5_result = document.getElementById('result_bt5');
+                console.log((bt5_Diemtb < 0 || bt5_Diemtb > 10) ? (b5_result.innerText = "Điểm ko hợp lệ") : (
+                        bt5_Diemtb >= 9) ?
+                    (b5_result.innerText = "Xuất sắc") : (bt5_Diemtb >= 8) ?
+                    (b5_result.innerText = "Giỏi") : (bt5_Diemtb >= 7) ?
+                    (b5_result.innerText = "Khá") : (bt5_Diemtb >= 6) ?
+                    (b5_result.innerText = "TB- Khá") : (bt5_Diemtb >= 5) ?
+                    (b5_result.innerText = "Trung bình") : (bt5_Diemtb < 5) ?
+                    (b5_result.innerText = "Yếu") : (""));
+            }
+        </script>
+    </div>
+    <div>
+        <p class="title">Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</p>
+        <input type="text" placeholder="Nhập số tiền bán được" id="bt6_num">
+        <button onclick="bt6()">Tính hoa hồng</button>
+        <p id="result_bt6"></p>
+    
+    <script>
+        function bt6() {
+            let bt6_num = Number(document.getElementById('bt6_num').value);
+            let bt6_hoahong= Math.round((bt6_num * 10)/100);
+            document.getElementById('result_bt6').innerText = `Hoa hồng nhận được: ${bt6_hoahong}`;
+        }
+    </script>
+    </div>
+    <div>
+        <p class="title">Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho</p>
+        <input type="text" placeholder="Nhập số giây đã gọi" id="bt7_num">
+        <button onclick="bt7()">Tính tiền</button>
+        <p id="result_bt7"></p>
+        <script>
+            function bt7() {
+                let bt7_num = Number(document.getElementById('bt7_num').value);
+                let bt7_money;
+                if (bt7_num <=6 && bt7_num >0){
+                    bt7_money = 80 * bt7_num;
+                    document.getElementById('result_bt7').innerText= ` Số tiền là ${bt7_money} Đồng `;
+                }
+                else
+                    bt7_money = (80*6)+ ((bt7_num-6)*89);
+                    document.getElementById('result_bt7').innerText= ` Số tiền là ${bt7_money} Đồng `;
+            }
+        </script>
+    </div>
+</body>
+
+</html>
