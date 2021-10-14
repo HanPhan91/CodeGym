@@ -1,0 +1,15 @@
+.header{
+    text-align: center;
+    font-size: 30px;
+    color: burlywood;
+}
+#play{
+    width: 420px;
+    height: 550px;
+    margin: 0 auto;
+    padding: 15px;
+}
+#play div{
+    text-align: center;
+    margin-top: 5px;
+}
