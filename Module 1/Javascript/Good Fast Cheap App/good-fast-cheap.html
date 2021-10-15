@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good-Fast-Cheap App</title>
+    <link rel="stylesheet" href="switch-toggles.css">
+    <style>
+        table{
+            background-color: rgb(218, 218, 218);
+            padding: 10px;
+            margin: 0 auto;
+        }
+        table td{
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+        <table>
+            <tr>
+                <td><div class="mt-normal-violet">
+                    <input type="checkbox" name="" id="1" onchange="run_good()">
+                    <label for="1"></label>
+                </div></td>
+                <td>Good</td>
+            </tr>
+            <tr>
+                <td><div class="mt-normal-juice">
+                    <input type="checkbox" name="" id="2" onchange="run_cheap()">
+                    <label for="2"></td>
+                <td>Cheap</td>
+            </tr>
+            <tr>
+                <td><div class="mt-normal-navi">
+                    <input type="checkbox" name="" id="3" onchange="run_fast()">
+                    <label for="3"></td>
+                <td>Fast</td>
+            </tr>
+        </table>
+
+
+    <!-- <div id="content">
+        <input type="checkbox" name="" id="good" onchange="run_good()"><span>Good</span><br>
+        <input type="checkbox" name="" id="cheap" onchange="run_cheap()"><span>Cheap</span><br>
+        <input type="checkbox" name="" id="fast" onchange="run_fast()"><span>Fast</span><br>
+    </div> -->
+    <script>
+            var check_good = document.getElementById('1');
+            var check_cheap = document.getElementById('2');
+            var check_fast = document.getElementById('3');
+            function run_good() {
+                if (check_fast.checked == true && check_cheap.checked == true)
+                    check_cheap.checked= false;
+            }
+            function run_cheap() {
+                if (check_good.checked == true && check_fast.checked == true) {
+                    check_good.checked = false;
+                }
+            }
+            function run_fast() {
+                if (check_good.checked == true && check_cheap.checked == true) {
+                    check_cheap.checked= false;
+                }
+            }
+    </script>
+</body>
+
+</html>
