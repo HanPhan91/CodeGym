@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loop</title>
+    <style>
+        .title{
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="title">Bài 1: Viết chương trình nhận vào một số từ hộp thoại, việc nhập kết thúc khi người dùng nhập vào
+        giá trị -1. Mỗi giá trị nhập được sẽ được hiển thị ra và thực hiện tính tổng các giá trị đó. </p>
+    <p id="result_bt1"></p>
+    <script>
+        let num=0;
+        let total = 0;
+        while (num != -1) {
+            num = Number(prompt("Enter a number: "));
+            alert(num);
+            //phần code tính tổng
+            total += num;
+        }
+        document.getElementById('result_bt1').innerText = ` Tổng dãy số vừa nhập là: ${total}`;
+    </script>
+    <p class="title">Bài 2:Viết chương hình hiển thị thẻ hr theo độ rộng từ 1 đến 100. Kết quả sẽ được hiển thị như hình</p>
+    <div id="result_bt2"></div>
+    <script>
+        let i = 1;
+        while (i < 100) {
+            // document.getElementById('result_bt2').innerHTML= `<hr width= ${i}% >`;
+            document.write("<hr width = " + i + "%>");
+            i++;
+        }
+    </script>
+</body>
+
+</html>
