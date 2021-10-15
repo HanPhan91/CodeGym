@@ -1,0 +1,10 @@
+* {
+    margin: 0px;
+    padding: 0;
+}
+#game{
+    position: absolute;
+}
+#nobita{
+    position: relative;
+}
