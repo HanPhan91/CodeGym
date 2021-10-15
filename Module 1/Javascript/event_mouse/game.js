@@ -6,27 +6,28 @@ yPosition = 0;
 widthBall = 100;
 let move = 20;
 let select_img = document.getElementById('ball');
-let rotate=180;
+let rotate = 180;
 initgame();
 
 function turnLeft() {
+    select_img.classList.add('run_left');
     yPosition = select_img.offsetLeft;
-    if (yPosition!=0) {
+    if (yPosition != 0) {
         select_img.style.left = `${yPosition- move}px`;
-        // select_img.style.transform= "rotateX(0deg)";
+        setTimeout(() => {
+            select_img.classList.remove('run_left');
+        }, 500);
     }
 }
 
 function turnRight() {
-    select_img.classList.add('run');
+    select_img.classList.add('run_right');
     yPosition = select_img.offsetLeft;
     if ((yPosition + widthBall) < widthScreen) {
         select_img.style.left = `${yPosition+ move}px`;
-        // select_img.style.animationName= "rotate";
-        
         setTimeout(() => {
-            select_img.classList.remove('run'); 
+            select_img.classList.remove('run_right');
         }, 500);
-       
+
     }
 }

@@ -16,7 +16,7 @@
     position: relative;
     transition: all 1s;
 }
-@keyframes rotate{
+@keyframes rotate_right{
     from {
         transform: rotate(0deg);
     }
@@ -27,8 +27,20 @@
 #ball.stop{
     -webkit-animation-iteration-count: unset;
 }
-#ball.run{
-    animation-name: rotate;
+#ball.run_right{
+    animation-name: rotate_right;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+}
+@keyframes rotate_left{
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+}#ball.run_left{
+    animation-name: rotate_left;
     animation-duration: 1s;
     -webkit-animation-iteration-count: infinite;
 }
