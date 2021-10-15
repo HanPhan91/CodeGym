@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#game{
+    margin-bottom: 200px;
+    margin-top: 20px;
+}
+#control table{
+    margin: 0 auto;
+}
+#control table tr td{
+    cursor: pointer;
+}
+#ball{
+    position: relative;
+}
