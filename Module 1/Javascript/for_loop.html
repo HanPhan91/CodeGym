@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop For</title>
+    <style>
+        .title{
+            font-size: 20px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>JavaScript Loops</h2>
+    <p class="title">Bài 1: Viết chương trình hiển thị chuỗi “The number is N” 5 lần sử dụng vòng lặp for. Với N sẽ hiển
+        thị từ 0 đến 5.</p>
+    <p id="demo"></p>
+    <script>
+        let text = "";
+        let i;
+        for (i = 0; i < 5; i++) {
+            text += "The number is " + i + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+    </script>
+    <p class="title">Bài 2: Viết chương trình nhập vào một số bất kỳ lớn hơn 0. Tính tổng các phần tử từ 1 đến số vừa
+        nhập vào.</p>
+    <script>
+        let num = prompt("Enter your number: ");
+        let total = 0;
+        let j = 1;
+        for (; j <= num; j += 1) {
+            total = total + j;
+        }
+        alert(` Tổng từ 1 đến ${j} là ${total}`);
+    </script>
+</body>
+
+</html>
