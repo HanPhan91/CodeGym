@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .content {
+            margin: 0 auto;
+            position: relative;
+            top: 50px;
+            left: 50px;
+        }
+
+        table {
+            width: 300px;
+            height: 300px;
+            border: 1px black solid;
+        }
+
+        button {
+            width: 100%;
+            height: 100%;
+            ;
+        }
+
+        input {
+            min-width: 300px;
+            height: 90%;
+        }
+
+        td {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <table>
+            <tr>
+                <td colspan="4"><input type="text" id="txtbox"></td>
+            </tr>
+            <tr>
+                <td><button onclick="getnumber(1,true)">1</button></td>
+                <td><button onclick="getnumber(2,true)">2</button></td>
+                <td><button onclick="getnumber(3,true)">3</button></td>
+                <td><button onclick="getnumber('+',false)">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="getnumber(4,true)">4</button></td>
+                <td><button onclick="getnumber(5,true)">5</button></td>
+                <td><button onclick="getnumber(6,true)">6</button></td>
+                <td><button onclick="getnumber('-',false)">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="getnumber(7,true)">7</button></td>
+                <td><button onclick="getnumber(8,true)">8</button></td>
+                <td><button onclick="getnumber(9,true)">9</button></td>
+                <td><button onclick="getnumber('x',false)">x</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="xoa()">C</button></td>
+                <td><button onclick="getnumber(0,true)">0</button></td>
+                <td><button onclick="calcu()">=</button></td>
+                <td><button onclick="getnumber('/',false)">/</button></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        var num;
+        var total = 0;
+        var num1 = 0,
+            num2 = 0;
+        var check_back;
+        var show = document.getElementById('txtbox');
+        let check = true;
+        let value;
+        show.value = "";
+
+        function getnumber(num, check_back) {
+            if (check_back == true) {
+                show.value += num;
+                check = true;
+            }
+            if (check_back == false) {
+                if (check == true) {
+                    show.value += num;
+                    check = false;
+                }
+            }
+        }
+
+        function xoa() {
+            show.value = '';
+        }
+
+        function calcu() {
+            let txtMath = show.value;
+            let lengthMath = txtMath.length;
+            let find;
+            if (txtMath.indexOf("+") != -1) {
+                find = txtMath.indexOf("+");
+                num1 = Number(txtMath.slice(0, find));
+                num2 = Number(txtMath.slice((find + 1), lengthMath));
+                total = num1 + num2;
+                show.value = String(total);
+            }
+            if (txtMath.indexOf("-") != -1) {
+                find = txtMath.indexOf("-");
+                num1 = Number(txtMath.slice(0, find));
+                num2 = Number(txtMath.slice((find + 1), lengthMath));
+                show.value = `${num1-num2}`;
+            }
+
+            if (txtMath.indexOf("x") != -1) {
+                find = txtMath.indexOf("x");
+                num1 = Number(txtMath.slice(0, find));
+                num2 = Number(txtMath.slice((find + 1), lengthMath));
+                show.value = `${num1*num2}`;
+            }
+            if (txtMath.indexOf("/") != -1) {
+                find = txtMath.indexOf("/");
+                num1 = Number(txtMath.slice(0, find));
+                num2 = Number(txtMath.slice((find + 1), lengthMath));
+                show.value = `${num1/num2}`;
+            }
+        }
+    </script>
+</body>
+
+</html>
