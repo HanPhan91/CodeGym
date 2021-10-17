@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Loop</title>
+    <style>
+        p{
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <p class="title">Vòng lặp for lồng nhau</p>
+    <script>
+        let sout;
+        sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>"
+        for (i = 1; i <= 10; i++) {
+            sout = sout + "<tr>";
+            for (j = 1; j <= 10; j++) {
+                sout = sout + "<td>" + i * j + "</td>";
+            }
+            sout = sout + "</tr>";
+        }
+        sout = sout + "</table>";
+        document.write(sout);
+        </script>
+    <p class="title">Vòng lặp While lồng nhau</p>
+    <script language="javascript">
+        let sout2, i2, j2;
+        sout2 = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+        i2 = j2 = 1;
+        while (i2 <= 10) {
+            sout2 = sout2 + "<tr>";
+            while (j2 <= 10) {
+                sout2 = sout2 + "<td>" + i2 * j2 + "</td>";
+                j2++;
+            }
+            sout2 = sout2 + "</tr>";
+            j2 = 1;
+            i2++;
+        }
+        sout2 = sout2 + "</table>";
+        document.write(sout2);
+        </script>
+</body>
+</html>
