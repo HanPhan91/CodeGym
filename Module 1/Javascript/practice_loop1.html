@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luyện tập vòng lặp 01</title>
+    <style>
+        .title{
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+  </head>
+  <body>
+    <p class="title">
+      Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp
+      thoại thông báo là đã hoàn thành.
+    </p>
+    <button onclick="bt1()">Thực hiện</button>
+    <script>
+      function bt1() {
+        for (let i = 1; i < 100; i++) {
+          if (i == 99) {
+            alert("Hoàn thành đếm đến 99");
+          }
+        }
+      }
+    </script>
+    <p class="title">
+      Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập
+      bởi người truy cập. Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng
+      giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.
+    </p>
+    <button onclick="bt2()">Thực hiện</button>
+    <script>
+      function bt2() {
+        let bt2_temp = Number(prompt("Vui lòng nhập nhiệt độ: "));
+        if (bt2_temp > 100) {
+          alert("Yêu cầu giảm nhiệt độ");
+        } else if (bt2_temp < 20) alert("Yêu cầu tăng nhiệt độ");
+      }
+    </script>
+    <p class="title">Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.</p>
+    <script>
+      let bt3_n1 = 0,
+        bt3_n2 = 1,
+        bt3_next,
+        bt3_count = 1;
+      document.write("20 số đầu tiên trong dãy Fibonacci: ");
+      document.write(bt3_n1 + " ");
+      document.write(bt3_n2 + " ");
+      bt3_next = bt3_n1 + bt3_n2;
+      while (bt3_count <= 18) {
+        document.write(bt3_next + " ");
+        bt3_n1 = bt3_n2;
+        bt3_n2 = bt3_next;
+        bt3_next = bt3_n1 + bt3_n2;
+        bt3_count += 1;
+      }
+    </script>
+    <p class="title">
+      Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.
+    </p>
+    <script>
+      let bt4_n1 = 0,
+        bt4_n2 = 1,
+        bt4_next;
+      document.write("Số đầu tiên trong dãy Fibonacci chia hết cho 5: ");
+      bt4_next = bt4_n1 + bt4_n2;
+      while (bt4_next) {
+        if (bt4_next % 5 == 0) {
+          document.write(bt4_next);
+          break;
+        } else {
+          bt4_n1 = bt4_n2;
+          bt4_n2 = bt4_next;
+          bt4_next = bt4_n1 + bt4_n2;
+        }
+      }
+    </script>
+    <p class="title">
+      Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.
+    </p>
+    <script>
+      let bt5_n1 = 0,
+        bt5_n2 = 1,
+        bt5_next,
+        bt5_count = 1,
+        bt5_total = 0;
+      document.write("Tổng 20 số đầu tiên trong dãy Fibonacci: ");
+      bt5_next = bt5_n1 + bt5_n2;
+      bt5_total = bt5_next;
+      while (bt5_count <= 18) {
+        bt5_n1 = bt5_n2;
+        bt5_n2 = bt5_next;
+        bt5_next = bt5_n1 + bt5_n2;
+        bt5_count += 1;
+        bt5_total += bt5_next;
+      }
+      document.write(bt5_total);
+    </script>
+    <p class="title">
+      Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.
+    </p>
+    <script>
+      let bt6_num = 1;
+      let bt6_total = 0;
+      let bt6_count = 0;
+      for (bt6_num; bt6_count <= 30; bt6_num++) {
+        if (bt6_num % 7 == 0) {
+          bt6_count += 1;
+          bt6_total += bt6_num;
+        }
+      }
+      document.write("Tổng 30 số đầu tiên chia hết cho 7 là: " + bt6_total);
+    </script>
+    <p class="title">
+      Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số
+      chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó.
+      Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".
+    </p>
+    <script>
+      let bt7_num;
+      for (bt7_num = 1; bt7_num <= 100; bt7_num++) {
+        if (bt7_num % 3 == 0 && bt7_num % 5 == 0) {
+          document.write("FizzBuzz <br>");
+        } else if (bt7_num % 3 == 0) {
+          document.write("Fizz <br>");
+        } else if (bt7_num % 5 == 0) {
+          document.write("Buzz <br>");
+        } else document.write(bt7_num + "<br>");
+      }
+    </script>
+    <p class="title">Bài 8: Game đoán số</p>
+    <button onclick="bt8()">Chơi</button>
+    <script>
+      function bt8() {
+        let bt8_size = Number(prompt("Nhập khoảng số bạn muốn đoán từ 1 đến: "));
+        let bt8_num = Number(prompt("Nhập số bạn đoán: "));
+        let bt8_ran = Math.round((Math.random() * bt8_size) + 1);
+        let bt8_count=0;
+        for(bt8_count; bt8_count< 3; bt8_count++){
+            if (bt8_num == bt8_ran){
+                alert("Bạn đã chiến thắng");
+                break;
+            }
+            else{
+                bt8_count+=1;
+                bt8_num = Number(prompt("Nhập số bạn đoán: "));
+            }
+        }
+        alert("Số cần đoán là: "+ bt8_ran);
+      }
+    </script>
+  </body>
+</html>
