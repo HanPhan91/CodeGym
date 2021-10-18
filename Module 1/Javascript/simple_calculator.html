@@ -105,34 +105,42 @@
 
         function calcu() {
             let txtMath = show.value;
-            let lengthMath = txtMath.length;
-            let find;
-            if (txtMath.indexOf("+") != -1) {
-                find = txtMath.indexOf("+");
-                num1 = Number(txtMath.slice(0, find));
-                num2 = Number(txtMath.slice((find + 1), lengthMath));
-                total = num1 + num2;
-                show.value = String(total);
-            }
-            if (txtMath.indexOf("-") != -1) {
-                find = txtMath.indexOf("-");
-                num1 = Number(txtMath.slice(0, find));
-                num2 = Number(txtMath.slice((find + 1), lengthMath));
-                show.value = `${num1-num2}`;
-            }
-
+            let math;
             if (txtMath.indexOf("x") != -1) {
-                find = txtMath.indexOf("x");
-                num1 = Number(txtMath.slice(0, find));
-                num2 = Number(txtMath.slice((find + 1), lengthMath));
-                show.value = `${num1*num2}`;
+                math = txtMath.replaceAll("x","*");
+                show.value = eval(math);
             }
-            if (txtMath.indexOf("/") != -1) {
-                find = txtMath.indexOf("/");
-                num1 = Number(txtMath.slice(0, find));
-                num2 = Number(txtMath.slice((find + 1), lengthMath));
-                show.value = `${num1/num2}`;
+            else{
+                show.value = eval(txtMath);
             }
+            // let lengthMath = txtMath.length;
+            // let find;
+            // if (txtMath.indexOf("+") != -1) {
+            //     find = txtMath.indexOf("+");
+            //     num1 = Number(txtMath.slice(0, find));
+            //     num2 = Number(txtMath.slice((find + 1), lengthMath));
+            //     total = num1 + num2;
+            //     show.value = String(total);
+            // }
+            // if (txtMath.indexOf("-") != -1) {
+            //     find = txtMath.indexOf("-");
+            //     num1 = Number(txtMath.slice(0, find));
+            //     num2 = Number(txtMath.slice((find + 1), lengthMath));
+            //     show.value = `${num1-num2}`;
+            // }
+
+            // if (txtMath.indexOf("x") != -1) {
+            //     find = txtMath.indexOf("x");
+            //     num1 = Number(txtMath.slice(0, find));
+            //     num2 = Number(txtMath.slice((find + 1), lengthMath));
+            //     show.value = `${num1*num2}`;
+            // }
+            // if (txtMath.indexOf("/") != -1) {
+            //     find = txtMath.indexOf("/");
+            //     num1 = Number(txtMath.slice(0, find));
+            //     num2 = Number(txtMath.slice((find + 1), lengthMath));
+            //     show.value = `${num1/num2}`;
+            // }
         }
     </script>
 </body>
