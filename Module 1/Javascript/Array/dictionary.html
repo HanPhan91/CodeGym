@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dictionary</title>
+  </head>
+  <body>
+    <span>Nhập từ cần dịch: </span>
+    <input type="text" id="txt" />
+    <button onclick="trans()">Dịch</button>
+    <p id="result"></p>
+    <script>
+      function trans() {
+        const vietnamese = ["xin chào", "cám ơn", "tạm biệt", "tiền"];
+        const english = ["hello", "thank you", "good bye", "money"];
+        let txt = document.getElementById("txt").value;
+        if (english.includes(txt)) {
+          for (let i = 0; i < english.length; i++) {
+            if(english[i]== txt){
+                document.getElementById('result').innerText= vietnamese[i];
+            }
+          }
+        }
+        else{
+            document.getElementById('result').innerText= "Không tìm thấy từ này";
+        }
+      }
+    </script>
+  </body>
+</html>
