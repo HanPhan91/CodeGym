@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập Mảng</title>
+    <style>
+        button{
+            margin-top: 10px;
+        }
+        .result{
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+  </head>
+  <body>
+    <button onclick="initArray()">Sinh ra mảng 10 phần tử từ 10 -> 50</button>
+    <p id="result1" class="result"></p>
+    <button onclick="total()">Trả về tổng giá trị của mảng</button>
+    <p id="result2" class="result"></p>
+    <button onclick="newArray()">
+      Trả về mảng mới gồm các phần tử là bình phương của mảng cũ
+    </button>
+    <p id="result3" class="result"></p>
+    <span>Nhập giá trị cần tìm: </span><input id="txt_find" type="text" />
+    <br /><button onclick="find()">Tìm kiếm</button>
+    <p id="result4" class="result"></p>
+    <span>Nhập vào khoảng cần tìm: </span><br>
+    <span>Min: </span><input type="text" id="min">
+    <span>Max: </span><input type="text" id="max"><br>
+    <button onclick="findSize()">TÌm kiếm</button>
+    <p id="result5" class="result"></p>
+    <script>
+      let array = new Array();
+      let strArray = "";
+      function initArray() {
+        for (let i = 0; i < 10; i++) {
+          array[i] = Math.round(Math.random() * 40) + 10;
+          strArray += `${array[i]} `;
+        }
+        document.getElementById("result1").innerText = strArray;
+      }
+      function total() {
+        let sum = array.reduce(getTotal);
+        document.getElementById("result2").innerText = sum;
+      }
+      function newArray() {
+        let new_array = new Array();
+        new_array = array.map(multi);
+        let str_newArray = "";
+        for (value of new_array) {
+          str_newArray += value + "  ";
+        }
+        document.getElementById("result3").innerText = str_newArray;
+      }
+      function find() {
+        let txtfind = Number(document.getElementById("txt_find").value);
+        if (array.indexOf(txtfind) != -1) {
+          document.getElementById("result4").innerText = "Tìm thấy";
+        } else {
+          document.getElementById("result4").innerText = "Không tìm thấy";
+        }
+      }
+      function findSize() {
+          let numMin= Number(document.getElementById("min").value);
+          let numMax= Number(document.getElementById("max").value);
+          let checkNum= array.some(check);
+          let txtTrue= "Đã có số trong khoảng cần tìm";
+          let txtFalse= "Không có số trong khoảng cần tìm";
+          if (checkNum == true){
+            document.getElementById("result5").innerText= txtTrue;
+          }
+          else{
+            document.getElementById("result5").innerText= txtFalse;
+          }
+          
+          function check(value) {
+          return ((value>numMin) && (value<numMax));
+      }
+      }
+
+      function multi(value) {
+        return value * value;
+      }
+      function getTotal(total, value) {
+        return total + value;
+      }
+      
+    </script>
+  </body>
+</html>
