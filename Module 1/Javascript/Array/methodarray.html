@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Method Array</title>
+    <style>
+      .title{
+        font-size: 18px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="title">
+      Bài 1: Viết một chương trình Javascript để nối tất cả các phần tử trong
+      một mảng chuỗi lại với nhau. Ví dụ có mảng chuỗi như sau: myColor =
+      ["Red", "Green", "White", "Black"];
+    </p>
+    <p id="result1"></p>
+    <script>
+      let myColor = ["Red", "Green", "White", "Black"];
+      document.getElementById("result1").innerText = myColor.join(",");
+    </script>
+    <p class="title">
+      Bài 2: Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2
+      số chẵn. Ví dụ nếu bạn nhập vào 025468 thì kết quả của chương trình sẽ là
+      0-254-6-8.
+    </p>
+    <span>Nhập vào chuỗi số: </span><input type="text" id="txtarray" /><br />
+    <button onclick="bt2()">Hiển thị kết quả</button>
+    <p id="result2"></p>
+    <script>
+      function bt2() {
+        let string = document.getElementById("txtarray").value;
+        let array = Array.from(string);
+        let items;
+        let txt = "";
+        for (let i = 0; i < array.length; i++) {
+          if (Number(array[i]) % 2 == 0) {
+            array.splice(i + 1, 0, "-");
+          }
+        }
+        for (items of array) {
+          txt += items + " ";
+        }
+        document.getElementById("result2").innerText = txt;
+      }
+    </script>
+    <p class="title">
+      Bài 3: Viết một chương trình nhập vào một chuỗi và chuyển các ký tự chữ
+      thường trong chuỗi vừa nhập sang thành dạng chữ hoa. Ví dụ: nếu bạn nhập
+      vào chuỗi 'The Quick Brown Fox' kết quả của chương trình là 'tHE qUICK
+      bROWN fOX'.
+    </p>
+    <span>Nhập chuỗi: </span><input type="text" id="txt" /><br />
+    <button onclick="bt3()">Chuyển đổi</button>
+    <p id="result3"></p>
+    <script>
+      function bt3() {
+        const UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const LOWER = "abcdefghijklmnopqrstuvwxyz";
+        const result = [];
+        let str = document.getElementById("txt").value;
+        for (let i = 0; i < str.length; i++) {
+          if (UPPER.includes(str[i])) {
+            result.push(str[i].toLowerCase());
+          }
+          else if (LOWER.includes(str[i])) {
+            result.push(str[i].toUpperCase());
+          }
+          else {
+            result.push(str[i]);
+          }
+        }
+        document.getElementById("result3").innerText= result.join("");
+      }
+    </script>
+  </body>
+</html>
