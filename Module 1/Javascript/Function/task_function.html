@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập 1</title>
+  </head>
+  <body>
+    <p class="title">1. Tính tổng các số chẵn trong ma trận</p>
+    <span>Nhập vào kích thước ma trận: </span
+    ><input type="text" id="size" /><br />
+    <span>Nhập vào giá trị Min: </span><input type="text" id="min" /><br />
+    <span>Nhập vào giá trị Max: </span><input type="text" id="max" /><br />
+    <button onclick="main()">Bắt đầu</button>
+    <div id="result5"></div>
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+    <div id="result6"></div>
+    <div id="result7"></div>
+
+    <script>
+           function getArray(size, min, max) {
+             let array = [];
+             for (let i = 0; i < size; i++) {
+               array[i] = [];
+               for (let j = 0; j < size; j++) {
+                 array[i][j] = Math.round(Math.random() * (max - min) + min);
+               }
+             }
+             return array;
+           }
+           function totalEven(array) {
+             let arrayFilter = [];
+             for (let i = 0; i < array.length; i++) {
+               for (let j = 0; j < array[i].length; j++) {
+                 if (array[i][j] % 2 == 0) {
+                   arrayFilter.push(array[i][j]);
+                 }
+               }
+             }
+             return arrayFilter.reduce(function (total, value) {
+               return total + value;
+             });
+           }
+           function totalDiagonalLineFirst(array) {
+             let total = 0;
+             for (let i = 0; i < array.length; i++) {
+               for (let j = 0; j < array[i].length; j++) {
+                 if (i == j) {
+                   total += array[i][j];
+                 }
+               }
+             }
+             return total;
+           }
+
+           function totalDiagonalLineSecond(array) {
+             let total = 0;
+             for (let i = array.length - 1; i >= 0; i--) {
+               for (let j = 0; j < array[i].length; j++) {
+                 if (i + j == array.length - 1) {
+                   total += array[i][j];
+                 }
+               }
+             }
+             return total;
+           }
+           function totalBorder(array) {
+             let total = 0;
+             for (let i = 0; i < array.length; i++) {
+               if (i==0 || i==array.length -1 ){
+                   for(let j=0; j< array[i].length; j++){
+                       total+= array[i][j];
+                   }
+               }
+               else{
+                   for(let j=0; j< array[i].length; j+= array[i].length -1){
+                       total+= array[i][j];
+                   }
+               }
+             }
+             return total;
+           }
+           function showMatrix(array){
+             let table= "<table>";
+               for(let i=0; i < array.length ; i++){
+                 table+="<tr>";
+                   for(let j=0; j < array[i].length; j++){
+                     table+=`<td>${array[i][j]}</td>`;
+                   }
+                 table+="</tr>";
+               }
+               table+="</table>";
+               document.getElementById('result5').innerHTML= table;
+           }
+      function showTriangleUp(array){
+         let table= "Hiển thị ma trận tam giác trên : <table>";
+              for(i= 0; i< array.length; i++){
+                table+="<tr>";
+                  for(let j=0; j< array[i].length-i; j++){
+                    table+=`<td>${array[i][j]}</td>`;
+                  }
+                  table+="</tr>";
+              }
+              table+="</table>";
+              return table;
+      }
+      // function showTriangleDown(array){
+      //    let table= "Hiển thị ma trận tam giác dưới : <table>";
+      //         for(i= array.length-1; i >=0 ; i--){
+      //           table+="<tr>";
+      //             for(let j=0; j< array[i].length-1; j++){
+      //               table+=`<td>${array[i][j]}</td>`;
+      //             }
+      //             table+="</tr>";
+      //         }
+      //         table+="</table>";
+      //         return table;
+      // }
+           function main() {
+             let size= Number(document.getElementById('size').value);
+             let min= Number(document.getElementById('min').value);
+             let max= Number(document.getElementById('max').value);
+             let arr= getArray(size,min,max);
+             showMatrix(arr);
+             document.getElementById('result1').innerText= `Tổng các số chẵn trong ma trận là: ${totalEven(arr)}`;
+             document.getElementById('result2').innerText= `Tổng các giá trị trên đường chéo chính là: ${totalDiagonalLineFirst(arr)}`;
+             document.getElementById('result3').innerText= `Tổng các giá trị trên đường chéo phụ : ${totalDiagonalLineSecond(arr)}`;
+             document.getElementById('result4').innerText= `Tổng các giá trị trên đường biên là: ${totalBorder(arr)}`;
+             document.getElementById('result6').innerHTML= showTriangleUp(arr);
+             document.getElementById('result7').innerHTML= showTriangleDown(arr);
+             // console.log(arr);
+             // console.log(totalEven(arr));
+             // console.log(totalTriangleFirst(arr));
+             // console.log(totalTriangleSecond(arr));
+             // console.log(totalBorder(arr));
+
+           }
+           // main();
+    </script>
+  </body>
+</html>
