@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý sản phẩm</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="content">
+      <div id="div_addProduct">
+        <h1>Add new Product</h1>
+        <div id="form_AddProduct">
+          <input type="text" id="addProduct" /><button
+            onclick="addNewProduct()"
+          >
+            Add
+          </button>
+        </div>
+      </div>
+      <div id="div_displayProduct">
+        <h1>Display All Product</h1>
+        <div id="div_Product">
+          <h3>Product Name</h3>
+          <table id="listProduct"></table>
+        </div>
+      </div>
+    </div>
+    <script src="product_managerment.js"></script>
+  </body>
+</html>
