@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Function 1</title>
+  </head>
+  <body>
+    <p class="title">
+      Bài 1: Tạo hàm alertMessage() hiển thị hộp thoại chứa chuỗi "Xin chao".
+      Gọi hàm từ trong phần body của trang web.
+    </p>
+    <button onclick="alertMessage()">Bài 1</button>
+    <script>
+      function alertMessage() {
+        alert("Xin chào");
+      }
+    </script>
+    <p class="title">
+      Bài 2: Tạo hàm nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1
+      và trả lại giá trị cho lời gọi hàm. Gọi hàm từ trong phần body của trang
+      web và hiển thị kết quả lên màn hình.
+    </p>
+    <button onclick="bt2()">Bài 2</button>
+    <p id="result2"></p>
+    <script>
+      function bt2() {
+        let num = Number(prompt("Nhập vào 1 số: "));
+        upNum(num);
+      }
+      function upNum(number) {
+        number += 1;
+        document.getElementById("result2").innerText = number;
+      }
+    </script>
+    <p class="title">
+      Bài 3: Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn
+      hơn tham số thứ hai, hiển thị hộp thoại thông báo cho người dùng. Nếu giá
+      trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng
+      của hai tham số.
+    </p>
+    <button onclick="bt3()">Bài 3</button>
+    <script>
+      function bt3() {
+        let num1 = Number(prompt("Nhập vào số thứ 1: "));
+        let num2 = Number(prompt("Nhập giá trị số thứ 2: "));
+        sosanh(num1, num2);
+      }
+      function sosanh(number1, number2) {
+        if (number1 > number2) {
+          alert("Số thứ nhất lớn hơn số thứ 2");
+        } else {
+          alert(` Tổng 2 số là: ${number1 + number2}`);
+        }
+      }
+    </script>
+    <p class="title">
+      Bài 4: Thêm các hàm alert() vào những vị trí thích hợp trong đoạn mã sau
+      để bạn có thể nhìn thấy giá trị của biến result trước và sau lời gọi hàm.
+      Đoạn mã có dạng như sau:
+    </p>
+    <button onclick="bt4()">Bài 4</button>
+    <script>
+      function addNumbers() {
+        firstNum = 4;
+        secondNum = 8;
+        result = firstNum + secondNum;
+        return result;
+      }
+      function bt4(){
+      result = 0;
+      alert(result);
+      result = addNumbers();
+      alert(result);
+    }
+    </script>
+    <p class="title">Bài 5: Tạo một mảng với bảy phần tử dạng chuỗi có giá trị là tên các ngôi sao sau: Polaris, Aldebaran, Deneb, Vega, Altair, Dubhe và Regulus. Tạo một mảng khác với bảy phần tử dạng chuỗi có giá trị là tên các chòm sao tương ứng chứa các ngôi sao: Ursa Minor, Tarurus, Cygnus, Lyra, Aquila, Ursa Major và Leo. Tiếp theo, tạo một hàm nhận vào một tham số dạng chuỗi duy nhất. Trong hàm này, duyệt qua mảng thứ nhất để tìm tên ngôi sao. Nếu tìm thấy, trả lại giá trị tương ứng với chỉ số đó ở mảng thứ hai. Nói cách khác, trả lại tên chòm sao của ngôi sao đó. Trong phần body của trang web, dùng hộp thoại prompt để người dùng nhập vào tên của ngôi sao, sau đó gọi hàm với thông tin đầu vào. Đừng quên xử lý trong trường hợp không tìm thấy ngôi sao nào. Cho kết quả hiển thị trên màn hình.</p>
+    <button onclick="bt5()">Bài 5</button>
+    <script>
+        function bt5(){
+            let array1=['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+            let array2=['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+            let arrayFind= prompt("Nhập tên ngôi sao cần tìm: ");
+            let check= array1.indexOf(arrayFind);
+            if (check== -1){
+                alert("Không tìm thấy");
+            }
+            else {
+                alert(array2[check]);
+            }
+        }
+    </script>
+  </body>
+</html>
