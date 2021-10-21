@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faking Textarea on Typing</title>
+    <style>
+      div {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Type anything slowly</h1>
+      <textarea
+        name=""
+        id="txt"
+        cols="50"
+        rows="10"
+        onkeydown="main()"
+      ></textarea>
+    </div>
+    <script>
+      let typing = [];
+      let array = "TÔI LÀ MỘT ĐỨA NGỐC!!";
+      function main() {
+        let txt = document.getElementById("txt").value;
+        let txtLength = txt.length;
+        if (txtLength > 0) {
+          for (let i = 0; i < txtLength; i++) {
+            typing+= array[i];
+            if(i==21){
+              document.getElementById("txt").value="";
+              typing="";
+            }
+          }
+        }
+        document.getElementById("txt").value = typing;
+        typing = "";
+        setTimeout("main()",1);
+      }
+    </script>
+  </body>
+</html>
