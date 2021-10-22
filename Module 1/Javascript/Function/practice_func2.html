@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Function 2</title>
+    <style>
+        .title{
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+  </head>
+  <body>
+    <p class="title">
+      Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm
+      vừa xây dựng được.
+    </p>
+    <button onclick="bt1()">Bài 1</button>
+    <script>
+      function bt1() {
+        let number = Number(prompt("Nhập số cần tính: "));
+        alert(`Bình phương của ${number} là ${tinhbinhphuong(number)}`);
+      }
+      function tinhbinhphuong(number) {
+        return number * number;
+      }
+    </script>
+    <p class="title">
+      Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây
+      dựng được
+    </p>
+    <button onclick="bt2()">Bài 2</button>
+    <script>
+      function bt2() {
+        let radius = Number(prompt("Nhập chu vi hình tròn: "));
+        alert(
+          `Diện tích hình tròn là: ${dientich(
+            radius
+          )}\nChu vi hình tròn là: ${chuvi(radius)}`
+        );
+      }
+      function dientich(number) {
+        return Math.PI * number * number;
+      }
+      function chuvi(number) {
+        return Math.PI * 2 * number;
+      }
+    </script>
+    <p class="title">
+      Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi
+      hàm vừa xây dựng được.
+    </p>
+    <button onclick="bt3()">Bài 3</button>
+    <script>
+      function bt3() {
+        let number = Number(prompt("Nhập số cần tính giai thừa"));
+        alert(`Giai thừa của ${number} là ${giaithua(number)}`);
+      }
+      function giaithua(number) {
+        let result = 1;
+        if (number == 0) {
+          return 1;
+        } else {
+          for (let i = 1; i <= number; i++) {
+            result *= i;
+          }
+          return result;
+        }
+      }
+    </script>
+    <p class="title">
+      Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu
+      là ký tự số hàm trả về true, ngược lại trả về false.
+    </p>
+    <button onclick="bt4()">Bài 4</button>
+    <script>
+      function bt4() {
+        let char = prompt("Nhập ký tự cần kiểm tra: ");
+        if (check(char)) {
+          alert("True");
+        } else alert("False");
+      }
+      function check(char) {
+        if (!isNaN(char)) {
+          return 1;
+        } else {
+          return 0;
+        }
+      }
+    </script>
+    <p class="title">
+      Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị
+      nhỏ nhất.
+    </p>
+    <button onclick="bt5()">Bài 5</button>
+    <script>
+      function bt5() {
+        let num1 = Number(prompt("Nhập số thứ nhất: "));
+        let num2 = Number(prompt("Nhập số thứ hai: "));
+        let num3 = Number(prompt("Nhập số thứ ba: "));
+        alert(`Số nhỏ nhất là: ${min(num1, num2, num3)}`);
+      }
+      function min(num1, num2, num3) {
+        return num1 < num2
+          ? num1 < num3
+            ? num1
+            : num3
+          : num2 < num3
+          ? num2
+          : num3;
+      }
+    </script>
+    <p class="title">
+      Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là
+      nguyên dương không. Nếu là nguyên dương trả về true, ngược lại trả về
+      false.
+    </p>
+    <button onclick="bt6()">Bài 6</button>
+    <script>
+      function bt6() {
+        let number = Number(prompt("Nhập vào một số: "));
+        checkNum(number);
+      }
+      function checkNum(number) {
+        if (number > 0) {
+          alert(`True`);
+        } else {
+          alert(`False`);
+        }
+      }
+    </script>
+    <p class="title">
+      Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số
+      nguyên đó.
+    </p>
+    <button onclick="bt7()">Bài 7</button>
+    <script>
+      function bt7() {
+        let num1 = Number(prompt("Nhập số thứ nhất: "));
+        let num2 = Number(prompt("Nhập số thứ hai: "));
+        swap(num1, num2);
+      }
+      function swap(num1, num2) {
+        let temp = 0;
+        temp = num1;
+        num1 = num2;
+        num2 = temp;
+        alert(` Số sau khi đổi chỗ là : ${num1} và ${num2}`);
+      }
+    </script>
+    <p class="title">
+      Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số
+      nguyên đó.
+    </p>
+    <button onclick="bt7()">Bài 7</button>
+    <script>
+      function bt7() {
+        let size = Number(prompt("Nhập kích thước mảng: "));
+        let arr = [];
+        for (let i = 0; i < size; i++) {
+          arr[i] = Number(prompt(`Nhập giá trị thứ ${i}: `));
+        }
+        alert(` Mảng sau khi đảo ngược: ${arr.reverse()}`);
+      }
+    </script>
+    <p class="title">
+      Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra
+      xem ký tự bất kỳ đó có nằm trong mảng không. Nếu có trả về số lần xuất
+      hiện của ký tự đó, nếu không trả về -1.
+    </p>
+    <button onclick="bt9()">Bài 9</button>
+    <script>
+      function bt9() {
+        let size = Number(prompt("Nhập vào kích thước mảng: "));
+        let array = [];
+        let count = 0;
+        for (let i = 0; i < size; i++) {
+          array[i] = prompt(`Nhập vào phần tử thứ ${i+1}: `);
+        }
+        let char = prompt("Nhập vào ký tự cần tìm: ");
+        for (let i = 0; i < size; i++) {
+          if (array[i] == char) {
+            count += 1;
+          }
+        }
+      if (count == 0){
+            count=-1;
+        }
+      alert(count);
+    }
+    </script>
+  </body>
+</html>
