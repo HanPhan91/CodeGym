@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle</title>
+</head>
+<body>
+    <script>
+        class Circle{
+            constructor (radius){3
+                this.radius= radius;
+            }
+                getRadius(){
+                    alert(`Bán kính hình tròn: ${Math.PI * 2 * radius}`);
+                }
+                getArea(){
+                    alert(`Diện tích hình tròn: ${Math.PI * radius * radius}`);
+                }
+        }
+        let radius= Number(prompt('Nhập vào bán kính hình tròn: '));
+        let circle1= new Circle(radius);
+        let chuvi= circle1.getRadius();
+        let dientich= circle1.getArea();
+    </script>
+</body>
+</html>
