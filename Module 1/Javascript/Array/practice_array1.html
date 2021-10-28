@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Array 1</title>
+    <style>
+        .title{
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <p class="title">Bài 1- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử. Chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10.</p>
+    <button onclick="bt1()">Thực hiện</button>
+    <p id="result_bt1"></p>
+    <script>
+        function bt1(){
+            let array=[10,2,4,14,15,70,3,4,1,20];
+            let result= array.filter(function (value, index){
+                return value>10;
+            })
+            document.getElementById('result_bt1').innerText= result;
+        }
+    </script>
+    <p class="title">Bài 2- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau. Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.</p>
+    <button onclick="bt2()">Thực hiện</button>
+    <p id="result_bt2"></p>
+    <script>
+        function bt2(){
+            let array=[10,2,4,14,15,70,3,4,1,20];
+            max=0;
+            position=0;
+            array.forEach(function(value, index){
+                if (max < value){
+                    max = value;
+                    position= index;
+                }
+            })
+            document.getElementById('result_bt2').innerText= `Giá trị lớn nhất là: ${max} tại vị trí: ${position}`;
+        }
+    </script>
+    <p class="title">Bài 3- Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.</p>
+    <button onclick="bt3()">Thực hiện</button>
+    <p id="result_bt3"></p>
+    <script>
+        function bt3(){
+            let array=[10,2,4,14,15,70,3,4,1,20];
+            function maxArray(arr){
+                return Math.max.apply(null, arr);
+            }
+            total= array.reduce(function(total, value){
+                return total+value;
+            },0);
+            document.getElementById('result_bt3').innerText= `Giá trị lớn nhất là ${maxArray(array)}. Giá trị trung bình của mảng là: ${total/array.length} `;
+        }   
+    </script>
+    <p class="title">Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.</p>
+    <button onclick="bt4()">Thực hiện</button>
+    <p id="result_bt4"></p>
+    <script>
+        function bt4(){
+            let array=[10,2,4,14,15,70,3,4,1,20];
+            array.reverse();
+            document.getElementById('result_bt4').innerText=` Mảng sau khi đảo ngược là: ${array}`;
+        }
+    </script>
+    <p class="title">Bài 5- Viết chương trình đếm số nguyên âm trong một chuỗi</p>
+    <button onclick="bt5()">Thực hiện</button>
+    <p id="result_bt5"></p>
+    <script>
+        function bt5(){
+        let array=[-10,2,-4,14,-15,70,3,4,1,20];
+        let count=0;
+        array.forEach(function(value, index){
+            if (value< 0)
+            count +=1;
+        });
+        document.getElementById('result_bt5').innerText= `Tổng số nguyên âm trong mảng là: ${count}`;
+    }
+    </script>
+    <p class="title">Bài 6- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình tìm xem V có nằm trong mảng số nguyên không? Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".</p>
+    <button onclick="bt6()">Thực hiện</button>
+    <p id="result_bt6"></p>
+    <script>
+        function bt6(){
+            let array=[-10,2,-4,14,-15,70,3,4,1,20];
+            let v= Number(prompt("Vui lòng nhập V cần tìm: "));
+            if (array.includes(v)){
+                alert("V is in the array");
+            }
+            else
+                alert("V is not in the array");
+        }
+    </script>
+    <p class="title">Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)</p>
+    <button onclick="bt7()">Thực hiện</button>
+    <p id="result_bt7"></p>
+    <script>
+        function bt7(){
+            let array=[-10,2,-4,14,-15,70,3,4,1,20];
+            let v= Number(prompt("Vui lòng nhập V cần tìm: "));
+            let position= array.indexOf(v);
+            if (position== -1){
+                alert("V is in the array");
+            }
+            else{
+                array.splice(position,1);
+                array.push(0);
+            
+            document.getElementById('result_bt7').innerText=` Mảng sau khi xóa phần tử V: ${array}`;
+            }
+        }
+    </script>
+    <p class="title">Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử. Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.</p>
+    <button onclick="bt8()">Thực hiện</button>
+    <p id="result_bt8"></p>
+    <script>
+        function bt8(){
+            let array=[-10,2,-4,14,-15,70,3,4,1,20];
+            array.sort(function(value1, value2){
+                return value2 - value1;
+            });
+            document.getElementById('result_bt8').innerText=` Mảng sau khi sắp xếp: ${array}`;
+        }
+    </script>
+    <p class="title">Bài 9- Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b. Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.</p>
+    <button onclick="bt9()">Thực hiện</button>
+    <p id="result_bt9"></p>
+    <script>
+        function bt9(){
+            let array1=[-10,2,-4,14,-15,70,3,4,1,20];
+            let array2=[10,2,180,14,-15,1000,3,40,200,20];
+            let array3= new Array();
+            document.getElementById('result_bt9').innerText=`Mảng sau khi nối từ 2 mảng còn lại: ${array3.concat(array1, array2)}`;
+        }
+    </script>
+</body>
+</html>
