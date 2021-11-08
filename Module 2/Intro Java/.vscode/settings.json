@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
         "reverse-array/com/codegym",
-        "find-element-in-array"
+        "find-element-in-array",
+        "find-max-element"
     ]
 }
