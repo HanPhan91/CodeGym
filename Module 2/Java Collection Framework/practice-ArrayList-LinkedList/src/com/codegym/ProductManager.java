@@ -42,6 +42,14 @@ public class ProductManager{
         IdComparator idComparator = new IdComparator();
         Collections.sort(arrayList, idComparator);
     }
+    public void showProduct(){
+        if (arrayList.size() == 0)
+            System.out.println("List rong");
+        else
+            for (Product product: arrayList) {
+                System.out.println(product.toString());
+            }
+    }
 }
 
 

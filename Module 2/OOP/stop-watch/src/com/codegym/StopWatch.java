@@ -10,14 +10,10 @@ public class StopWatch {
     }
 
     private LocalTime getStartTime() {
-//        return java.time.LocalTime.now();
-        ZoneId z = ZoneId.of("Asia/Ho_Chi_Minh");
         return startTime = LocalTime.now();
     }
 
     private LocalTime getEndTime() {
-//        return java.time.LocalTime.now();
-        ZoneId z = ZoneId.of("Asia/Ho_Chi_Minh");
         return endTime = LocalTime.now();
     }
 

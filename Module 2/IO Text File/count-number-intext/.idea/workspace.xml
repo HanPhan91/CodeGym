@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2dbd7a00-9327-45bf-baf7-53f54e87d2ff" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../DSA Stack - Queue/Circular Queue/src/com/codegym/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../DSA Stack - Queue/Circular Queue/src/com/codegym/Solution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DSA Stack - Queue/array-stack/src/com/codegym/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../DSA Stack - Queue/array-stack/src/com/codegym/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java Collection Framework/practice-ArrayList-LinkedList/out/production/practice-ArrayList-LinkedList/com/codegym/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java Collection Framework/practice-ArrayList-LinkedList/out/production/practice-ArrayList-LinkedList/com/codegym/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java Collection Framework/practice-ArrayList-LinkedList/out/production/practice-ArrayList-LinkedList/com/codegym/ProductManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java Collection Framework/practice-ArrayList-LinkedList/out/production/practice-ArrayList-LinkedList/com/codegym/ProductManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java Collection Framework/practice-ArrayList-LinkedList/src/com/codegym/IdProductServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java Collection Framework/practice-ArrayList-LinkedList/src/com/codegym/IdProductServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java Collection Framework/practice-ArrayList-LinkedList/src/com/codegym/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java Collection Framework/practice-ArrayList-LinkedList/src/com/codegym/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java Collection Framework/practice-ArrayList-LinkedList/src/com/codegym/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java Collection Framework/practice-ArrayList-LinkedList/src/com/codegym/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java Collection Framework/practice-ArrayList-LinkedList/src/com/codegym/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java Collection Framework/practice-ArrayList-LinkedList/src/com/codegym/ProductManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java Collection Framework/practice-ArrayList-LinkedList/src/com/codegym/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java Collection Framework/practice-ArrayList-LinkedList/src/com/codegym/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Java Collection Framework/practice-ArrayList-LinkedList/src/com/codegym/ProductView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java Collection Framework/practice-ArrayList-LinkedList/src/com/codegym/ProductView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OOP/stop-watch/src/com/codegym/StopWatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/stop-watch/src/com/codegym/StopWatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Slides/Slide 6 - Inheritance.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Slides/Slide 6 - Inheritance.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Sorting Algorithms/insertion_Sort/out/production/insertion_Sort/com/codegym/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Sorting Algorithms/insertion_Sort/out/production/insertion_Sort/com/codegym/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Sorting Algorithms/insertion_Sort/src/com/codegym/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Sorting Algorithms/insertion_Sort/src/com/codegym/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="21Zbmf3X71A4t1RQFQ6zELL58wY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.codegym.Main" />
+      <module name="count-number-intext" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2dbd7a00-9327-45bf-baf7-53f54e87d2ff" name="Changes" comment="" />
+      <created>1638151721366</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638151721366</updated>
+      <workItem from="1638151722790" duration="846000" />
+      <workItem from="1638152626335" duration="102000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

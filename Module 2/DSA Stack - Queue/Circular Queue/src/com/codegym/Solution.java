@@ -14,15 +14,15 @@ public class Solution {
         }
     }
 
-    static void enQueue(Queue q, int data) {
+    static void enQueue(Queue q, int data) { //Thêm phần tử vào cuối
         Node temp = new Node();
         temp.data = data;
-        if (q.front == null)
+        if (q.front == null) //Nếu hàng đợi rỗng thì đầu = cuối = data thêm vào
             q.front = q.rear = temp;
         else
-            q.rear.link = temp;
-        q.rear = temp;
-        q.rear.link = q.front;
+            q.rear.link = temp; //Gán liên kết phần tử cuối bằng temp
+        q.rear = temp; // Đặt lại phần tử cuối
+        q.rear.link = q.front; // Nối phần tử cuối với phần tử đầu
     }
 
     static int deQueue(Queue q) { // Lấy ra phần tử đầu tiên
