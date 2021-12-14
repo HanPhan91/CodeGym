@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="20081394-2f78-461f-b68c-e6ff56b25a54" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../IO Binary File &amp; Serialization/readwrite-list-student/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../IO Binary File &amp; Serialization/readwrite-list-student/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/Phone-book.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/data/contacts.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/out/production/Phone-book/com/codegym/File/ReadFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/out/production/Phone-book/com/codegym/File/WriteFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/out/production/Phone-book/com/codegym/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/out/production/Phone-book/com/codegym/Management/PhoneBookManagement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/out/production/Phone-book/com/codegym/Model/PhoneBook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/out/production/Phone-book/com/codegym/Regex/RegexEmail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/out/production/Phone-book/com/codegym/Regex/RegexPhone.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/out/production/Phone-book/com/codegym/Services/IServices.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/out/production/Phone-book/com/codegym/Services/Services.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/src/com/codegym/File/ReadFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/src/com/codegym/File/WriteFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/src/com/codegym/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/src/com/codegym/Management/PhoneBookManagement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/src/com/codegym/Model/PhoneBook.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/src/com/codegym/Regex/RegexEmail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/src/com/codegym/Regex/RegexPhone.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/src/com/codegym/Services/IServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Test Module 2/Phone-book/src/com/codegym/Services/Services.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="228B52zfOgH7lDrtcp7ztdl5elw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../CaseStudy 2/Coffee-Management" />
+  </component>
+  <component name="RunManager" selected="Application.ThongNhat">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.codegym.Main" />
+      <module name="Use-case" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThongNhat" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codegym.ThongNhat" />
+      <module name="Use-case" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codegym.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ThongNhat" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="20081394-2f78-461f-b68c-e6ff56b25a54" name="Changes" comment="" />
+      <created>1639209149439</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639209149439</updated>
+      <workItem from="1639209150613" duration="595000" />
+      <workItem from="1639212735681" duration="104000" />
+      <workItem from="1639361341702" duration="17000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
