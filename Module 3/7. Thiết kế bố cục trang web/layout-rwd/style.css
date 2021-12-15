@@ -1,0 +1,97 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+header{
+    height: 50px;
+    width: 100%;
+    background-color: rgb(94, 93, 93);
+}
+header div{
+    margin: 10px 20px;
+}
+#logo{
+    float: left;
+}
+#logo p{
+    font-size: 25px;
+}
+#menu{
+    float: left;
+}
+#menu li{
+    display: inline;
+    margin-left: 20px;
+    padding: 23px 10px;
+    margin-top: 0;
+}
+#menu a{
+    text-decoration: none;
+    color: rgb(185, 185, 185);
+}
+#menu li:hover{
+    background-color: black;
+    color: white;
+}
+#login{
+    float: right;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+#content{
+   height: 85vh;
+}
+#left{
+    float: left;
+    width: 15%;
+    height: 100%;
+    text-align: center;
+    background-color: rgb(145, 143, 143);
+    
+}
+#left li{
+    margin: 20px 0;
+}
+#left a{
+    text-decoration: none;
+}
+#center{
+    float: left;
+    width: 70%;
+}
+#center p,h1{
+    margin: 10px 20px;
+}
+#center h1{
+    font-size: 50px;
+}
+#right{
+    float: left;
+    width: 15%;
+    text-align: center;
+    height: 100%;
+    background-color: rgb(145, 143, 143);
+}
+.ads{
+    margin: 20px 20px;
+    border: solid black;
+    padding: 20px;
+}
+footer{
+    height: 50px;
+    width: 100%;
+    background-color: rgb(94, 93, 93);  
+}
+#footer p {
+    text-align: center;
+    padding-top: 20px;
+}
+hr{
+    height: 10px;
+}
