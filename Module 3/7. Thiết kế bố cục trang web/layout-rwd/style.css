@@ -3,6 +3,7 @@
     padding: 0;
     border: 0;
     font-size: 100%;
+    box-sizing: border-box;
 }
 header{
     height: 50px;
@@ -45,7 +46,8 @@ header div{
     display: table;
 }
 #content{
-   height: 85vh;
+   height: 100ch;
+   position: relative;
 }
 #left{
     float: left;
@@ -87,11 +89,45 @@ footer{
     height: 50px;
     width: 100%;
     background-color: rgb(94, 93, 93);  
+    
 }
-#footer p {
+footer p {
     text-align: center;
     padding-top: 20px;
 }
-hr{
-    height: 10px;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #logo p{
+        font-size: 20px;
+    }
+    header div{
+        margin-left: 5px;
+    }
+    #content{
+        height: 100%;
+        /* position: relative; */
+    }
+
+    #left,#right{
+        display: none;
+    }
+    #center{
+        height: 100%;
+    }
+    footer p {
+        text-align: center;
+        padding-top: 20px;
+    }
 }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
