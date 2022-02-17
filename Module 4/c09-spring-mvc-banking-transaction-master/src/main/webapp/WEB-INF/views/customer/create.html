@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create customers</title>
+    <th:block th:replace="layout/head :: head"/>
+</head>
+<body>
+
+<div class="container">
+    <div class="table-title">
+        <div class="row">
+            <div class="col-sm-5">
+                <h1>Create customer</h1>
+            </div>
+            <div class="col-sm-7">
+                <a href="/customers" class="btn btn-outline-light">
+                    <i class="fa fa-list" aria-hidden="true"></i>
+                    <span>Customers List</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <form id="frmCreateCustomer" th:object="${customer}" method="post">
+            <fieldset class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">Full name</label>
+                    <input type="text" class="form-control" id="fullName" name="fullName" value="">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" value="">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Phone</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" value="">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Address</label>
+                    <input type="text" class="form-control" id="address" name="address" value="">
+                </div>
+                <div class="col-md-12">
+                    <button type="submit" id="btnCreateCustomer" class="btn btn-outline-primary">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                        Create customer
+                    </button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

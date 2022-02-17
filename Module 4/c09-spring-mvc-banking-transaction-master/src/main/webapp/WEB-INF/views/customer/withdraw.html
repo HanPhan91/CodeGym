@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Withdraw</title>
+    <th:block th:replace="layout/head :: head"/>
+</head>
+<body>
+
+<div class="container">
+    <div class="table-title">
+        <div class="row">
+            <div class="col-sm-7">
+                <h1>Withdraw money</h1>
+            </div>
+            <div class="col-sm-5">
+                <a href="/customers" class="btn btn-outline-light">
+                    <i class="fa fa-list" aria-hidden="true"></i>
+                    <span>Customers List</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <form id="frmWithdraw" th:object="${withdraw}" method="post">
+            <fieldset class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">Customer ID</label>
+                    <input type="text" class="form-control" id="customerId" th:value="${customer.id}" readonly>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Full name</label>
+                    <input type="text" class="form-control" id="fullName" th:value="${customer.fullName}" readonly>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Current balance ($)</label>
+                    <input type="tel" class="form-control" id="balance" th:value="${customer.balance}" readonly>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Transaction Amount ($)</label>
+                    <input type="text" class="form-control" id="transactionAmount" th:field="*{transactionAmount}">
+                </div>
+                <div class="col-md-12">
+                    <button type="submit" id="btnDeposit" class="btn btn-outline-warning">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                        Withdraw
+                    </button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

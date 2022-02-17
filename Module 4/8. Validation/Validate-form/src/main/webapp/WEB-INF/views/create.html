@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <script src="assets/js/bootstrap.js"></script>
+</head>
+<body>
+<div class="container">
+    <th:block th:if="${error}">
+        <p th:text="${error}"></p>
+    </th:block>
+    <form th:object="${user}" th:action="@{/validateUser}" method="post">
+        <div class="row">
+            <div class="col-4">
+                <label>First Name:</label>
+            </div>
+            <div class="col-8">
+                <input type="text" th:field="*{firstName}"/>
+                <span th:field="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></span>
+            </div>
+            <div class="col-4">
+                <label>Last Name:</label>
+            </div>
+            <div class="col-8">
+                <input th:field="*{lastName}"/>
+                <span th:field="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></span>
+            </div>
+            <div class="col-4">
+                <label>Phone Number:</label>
+            </div>
+            <div class="col-8">
+                <input th:field="*{phoneNumber}" type="tel"/>
+                <span th:field="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"></span>
+            </div>
+            <div class="col-4">
+                <label>Age:</label>
+            </div>
+            <div class="col-8">
+                <input th:field="*{age}" type="number"/>
+                <span th:field="${#fields.hasErrors('age')}" th:errors="*{age}"></span>
+            </div>
+            <div class="col-4">
+                <label>Email:</label>
+            </div>
+            <div class="col-8">
+                <input th:field="*{email}"/>
+                <span th:field="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="submit" value="Save">
+                </div>
+            </div>
+        </div>
+        <!--        <div class="row">-->
+        <!--            <div class="col-4">-->
+        <!--                <p class="title">First Name:</p>-->
+        <!--                <p class="title">Last Name:</p>-->
+        <!--                <p class="title">Phone Number:</p>-->
+        <!--                <p class="title">Age:</p>-->
+        <!--                <p class="title">Email:</p>-->
+        <!--                <input type="submit" value="Save">-->
+        <!--            </div>-->
+        <!--            <div class="col-8">-->
+        <!--&lt;!&ndash;                <input th:field="*{firstName}"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;                <span th:field="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" ></span><br>&ndash;&gt;-->
+
+        <!--                <input th:field="*{lastName}" />-->
+        <!--                <span th:field="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></span><br>-->
+
+        <!--                <input th:field="*{phoneNumber}" />-->
+        <!--                <span th:field="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"></span><br>-->
+
+        <!--                <input th:field="*{age}" />-->
+        <!--                <span th:field="${#fields.hasErrors('age')}" th:errors="*{age}"></span><br>-->
+
+        <!--                <input th:field="*{email}" />-->
+        <!--                <span th:field="${#fields.hasErrors('email')}" th:errors="*{email}"></span><br>-->
+        <!--            </div>-->
+        <!--        </div>-->
+
+
+    </form>
+</div>
+</body>
+</html>

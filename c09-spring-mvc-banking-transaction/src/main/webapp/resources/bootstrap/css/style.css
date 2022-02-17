@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.table-content {
+    width: 85% !important;
+}
+.card-title{
+    height: 100px;
+}
+th{
+    background-color: #4CAF50 !important;
+}
+td{
+    border: solid 0px #ddd ;
+}
+.card-footer{
+    /* transform: translateY(100%); */
+}
+.footer{
+    height: 50px !important;
+    background-color: #d1e7dd !important;
+}
+.close-btn{
+    color: red;
+}
+.footer-error{
+    height: 70px !important;
+    background-color: #f8d7da !important;
+}

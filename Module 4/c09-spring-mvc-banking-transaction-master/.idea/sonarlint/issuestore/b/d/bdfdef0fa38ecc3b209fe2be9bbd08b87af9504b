@@ -1,0 +1,32 @@
+
+V
+java:S1854Y"@Remove this useless assignment to local variable "lstCustomers".(ÃƒŸ«
+G
+java:S1481Y"1Remove this unused "lstCustomers" local variable.(ÃƒŸ«
+[
+java:S4684"@Replace this persistent entity with a simple POJO or DTO object.(Æ«ıüÿÿÿÿ
+\
+java:S4684‰"@Replace this persistent entity with a simple POJO or DTO object.(ã÷ÂÓøÿÿÿÿ
+\
+java:S4684—"@Replace this persistent entity with a simple POJO or DTO object.(‡…üÿÿÿÿ
+\
+java:S4684®"@Replace this persistent entity with a simple POJO or DTO object.(²¦â˜üÿÿÿÿ
+\
+java:S4684Î"@Replace this persistent entity with a simple POJO or DTO object.(ê¯“‘øÿÿÿÿ
+W
+java:S4684Õ"@Replace this persistent entity with a simple POJO or DTO object.(Ñş¸¿
+`
+java:S11921"JDefine a constant instead of duplicating this literal "customer" 17 times.(ÜÑÚ
+l	java:S117·"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÔÜöîşÿÿÿÿ
+f	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãÔõf
+l	java:S117¹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•åêÊÿÿÿÿÿ
+F
+java:S5411Ø"*Use the primitive boolean expression here.(Ù„Ø‰üÿÿÿÿ
+M
+java:S3655Å"7Call "Optional#isPresent()" before accessing the value.(‰§£{
+M
+java:S3655;"7Call "customer.isPresent()" before accessing the value.(ÛÀì‘
+M
+java:S3655F"7Call "customer.isPresent()" before accessing the value.(ÛÀì‘
+M
+java:S3655¥"7Call "Optional#isPresent()" before accessing the value.(‰§£{

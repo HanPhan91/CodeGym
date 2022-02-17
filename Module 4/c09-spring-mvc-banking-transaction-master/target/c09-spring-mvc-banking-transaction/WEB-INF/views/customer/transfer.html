@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Transfer money</title>
+    <th:block th:replace="layout/head :: head"/>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="table-title">
+        <div class="row">
+            <div class="col-sm-7">
+                <h1>Transfer money Information</h1>
+            </div>
+            <div class="col-sm-5">
+                <a href="/customers" class="btn btn-outline-light">
+                    <i class="fa fa-list" aria-hidden="true"></i>
+                    <span>Customers List</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <form id="frmTransfer" th:object="${transfer}" method="post">
+            <fieldset class="row g-3">
+                <div class="col-md-3">
+                    <label class="form-label">Sender ID</label>
+                    <input type="text" class="form-control" id="senderId" th:value="${sender.id}" readonly>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Sender name</label>
+                    <input type="text" class="form-control" id="senderName" th:value="${sender.fullName}"
+                           readonly>
+                </div>
+
+                <div class="col-md-3">
+                    <label class="form-label">Email</label>
+                    <input type="tel" class="form-control" id="emailSender" th:value="${sender.email}" readonly>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Sender balance</label>
+                    <input type="text" class="form-control" id="senderBalance" th:value="${sender.balance}"
+                           readonly>
+                </div>
+                <div class="col-md-3">
+                    <label for="recipientId" class="form-label">Recipient Name</label>
+                    <div class="col-sm-12">
+                        <select id="recipientId" class="form-select" name="recipient">
+                            <th:block th:each="recipient : ${recipients}">
+                                <option th:value="${recipient.id}"
+                                        th:text=" '('+${recipient.id} + ') ' + ${recipient.fullName} "></option>
+                            </th:block>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Transfer Amount ($)</label>
+                    <input type="text" class="form-control" id="transferAmount" th:field="*{transferAmount}">
+                </div>
+
+                <div class="col-md-3">
+                    <label class="form-label">Fees (%)</label>
+                    <input type="tel" class="form-control" id="fees" value="10" readonly>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Total amount of transaction ($)</label>
+                    <input type="text" class="form-control" id="totalAmount" th:field="*{transactionAmount}"
+                           readonly>
+                </div>
+                <div class="col-md-12">
+                    <button type="submit" id="btnDeposit" class="btn btn-outline-warning">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                        Transfer
+                    </button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+<script>
+    $("#transferAmount").on("change", function () {
+        if ($("#transferAmount").length > 0) {
+            let transfer = parseInt($("#transferAmount").val());
+            let transaction = transfer * 0.1 + transfer;
+            $("#totalAmount").val(transaction);
+        } else
+            $("#totalAmount").val("0");
+    });
+</script>
+</body>
+
+</html>

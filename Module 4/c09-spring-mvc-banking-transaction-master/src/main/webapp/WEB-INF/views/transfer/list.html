@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transfer</title>
+    <link rel="stylesheet" href="/resources/bootstrap-5.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/resources/fontawesome-free-5.15.4-web/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/resources/fontawesome-free-5.15.4-web/css/solid.min.css">
+    <link rel="stylesheet" href="/resources/css/styles.css">
+    <script src="/resources/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
+    <!--    <script src="/resources/fontawesome-free-5.15.4-web/js/fontawesome.min.js"></script>-->
+</head>
+<body>
+
+<div class="container">
+    <div class="table-title">
+        <div class="row">
+            <div class="col-sm-5">
+                <h1>Transfer history</h1>
+            </div>
+            <div class="col-sm-7">
+                <a href="/customers" class="btn btn-outline-light">
+                    <i class="fa fa-history" aria-hidden="true"></i>
+                    <span>List customer</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Sender ID</th>
+            <th scope="col">Sender Name</th>
+            <th scope="col">Recipient ID</th>
+            <th scope="col">Recipient Name</th>
+            <th scope="col">Transfer Amount ($)</th>
+            <th scope="col">Fees (%)</th>
+            <th scope="col">Fees Amount ($)</th>
+        </tr>
+        </thead>
+        <tbody>
+            <th:block th:each="tr,count : ${listTransfer}">
+                <tr>
+                    <td th:text="${count.count}"></td>
+                    <td th:text="${tr.senderId}"></td>
+                    <td th:text="${tr.senderName}"></td>
+                    <td th:text="${tr.recipientId}"></td>
+                    <td th:text="${tr.recipientName}"></td>
+                    <td th:text="${tr.transferAmount}"></td>
+                    <td th:text="${tr.fees}"></td>
+                    <td th:text="${tr.feesAmount}"></td>
+                </tr>
+            </th:block>
+                <tr>
+                    <td colspan="6" class="fw-bold text-end">Total:</td>
+                    <td colspan="2" class="text-center fs-4" th:text="${totalAmount}"></td>
+                </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
